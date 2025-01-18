@@ -1,3 +1,59 @@
+*{
+    padding:  0px ;
+    margin : 0px ;
+    box-sizing: border-box;
+    color : white ;
+}
+*::selection{
+    background-color: rgb(30, 251, 45);
+}
 body{
     background-color : #eee ;
+}
+nav{
+    display : grid;
+    grid-template-columns: 2fr 1fr;
+}
+ul{
+    list-style : none ;
+    display : grid ;
+    grid-template-columns: repeat(5 , auto);
+    gap : 30px ;
+    font-size : 20px ;
+    font-weight: 400;
+    padding : 10px ;
+
+}
+li{
+    position : relative;
+    cursor: pointer;
+}
+li::before{
+    content : '';
+    position: absolute;
+    height : 3px ;
+    width : 0 ;
+    bottom : -5px; ;
+    left : 0;
+    color : rgb(216, 175, 40) ;
+    background-color: rgb(30, 251, 45);
+    transition: width 0.3s ease;
+}
+li:hover::before{
+    width : 50% ;
+}
+.logo{
+    display : flex;
+    font-size:  30px;
+    align-items: center;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left:30px ;
+}
+div{
+    width : 100%;
+}
+nav{
+    height : 50px ;
 }
