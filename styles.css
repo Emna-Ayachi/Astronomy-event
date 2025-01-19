@@ -7,14 +7,23 @@
 *::selection{
     background-color: #6CB4EE;
 }
-.background{
+.background ,.registration-background{
     background-image: url("photos/background1.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     height: 100vh;
     display: flex;
-    color: white; 
+}
+/*main section backround*/
+.background {
+    background-image: url("photos/background1.jpg");
+}
+/* registration background */
+.registration-background{
+    background-image: url("photos/registration.png");
+    display : flex ;
+    justify-content: flex-end;
 }
 body, html {
     margin: 0;
@@ -94,4 +103,39 @@ h1 {
 /* anchor tags styling*/
 a{
     text-decoration: none;
+}
+/*registration form*/
+form{
+    display : flex ;
+    flex-direction: column;
+    align-items: center;
+    margin-top : 50px ;
+    height : auto ;
+    gap : 30px ;
+
+}
+input{
+    width : 400px ;
+    height : 50px ;
+    border-radius: 10px;
+    font-size : 20px ;
+    text-align: center;
+    background-color: #181818;
+}
+input::placeholder{
+    text-align: center;
+}
+button{
+    padding : 10px ;
+    border-radius: 10px ;
+    background-color: #6CB4EE;
+    border : none;
+    width : 200px ;
+    height : 50px;
+    cursor : pointer;
+    transition: 1s ease;
+}
+button:hover{
+    background-color : white ;
+    color : #6CB4EE;
 }
