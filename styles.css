@@ -7,11 +7,14 @@
 *::selection{
     background-color: #6CB4EE;
 }
-body{
+.background{
     background-image: url("photos/background1.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+    height: 100vh;
+    display: flex;
+    color: white; 
 }
 body, html {
     margin: 0;
