@@ -4,15 +4,25 @@
     box-sizing: border-box;
     color : white ;
 }
+*::selection{
+    background-color: #6CB4EE;
+}
+body{
+    background-image: url("photos/background1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Arial', sans-serif; 
+    font-family: 'Arial', sans-serif;
 }
 nav{
     display : grid;
     grid-template-columns: 2fr 1fr;
+    align-items: center;
 }
 ul{
     list-style : none ;
@@ -33,7 +43,7 @@ li::before{
     position:absolute;
     width: 0;
     height: 2px;
-    background-color:#fff;
+    background-color: #6CB4EE;
     left:0;
     bottom: -10px;
     transition: 0.3s all ease-in-out;
@@ -45,7 +55,9 @@ li:hover::before{
     display : flex;
     font-size:  30px;
     align-items: center;
+    margin-left: 100px;
 }
+
 p{
     font-family: Arial, Helvetica, sans-serif;
     margin-left:30px ;
@@ -54,22 +66,29 @@ div{
     width : 100%;
 }
 nav{
-    height : 50px ;
+    height : auto ;
     background-color: black;
 }
-.background{
-    background-image:url(background1.jpg);
-    background-size: cover;
-    background-position: center; 
-    height: 100vh; 
-    display: flex;
-    align-items: center;
-    color: white; 
-    justify-content: center;
-}
 h1 {
-    font-size: 4rem; 
-    font-weight: 700; 
+    font-size: 4rem;
+    font-weight: 700;
     margin:0;
     text-align: center;
+}
+
+/* main section goes here */
+.main-section{
+    display : flex ;
+    flex-direction: column;
+    gap : 30px ;
+    align-items: center;
+    height: auto;
+    margin-top: 50px;
+}
+.main-section p {
+    font-size : 20px;
+}
+/* anchor tags styling*/
+a{
+    text-decoration: none;
 }
