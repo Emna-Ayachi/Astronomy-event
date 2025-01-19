@@ -81,7 +81,7 @@ nav{
     height : auto ;
     background-color: black;
 }
-h1 {
+.title{
     font-size: 4rem;
     font-weight: 700;
     margin:0;
@@ -111,8 +111,11 @@ form{
     align-items: center;
     margin-top : 50px ;
     height : auto ;
-    gap : 30px ;
-
+    margin-right : 50px ;
+    gap : 20px;
+}
+form h1{
+    font-size : 50px;
 }
 input{
     width : 400px ;
@@ -138,4 +141,114 @@ button{
 button:hover{
     background-color : white ;
     color : #6CB4EE;
+}
+
+/* workshops styling */
+.background2{
+    background-color: black;
+    background-position: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3 , auto);
+    grid-template-rows: repeat(3,auto);
+    justify-content: space-around;
+    align-items: space-between;
+    color: white;
+}
+.card{
+    width:200px;
+    height:300px;
+    perspective: 1000px;
+    overflow: visible;
+}
+.card-inner{
+    width:100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style:preserve-3d;
+    position: relative;
+    box-shadow: 0 4px 6px #6CB4EE;
+}
+.card:hover .card-inner{
+    transform: rotateY(180deg);
+}
+.card-font, .card-back{
+    width:100%;
+    height:100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    border-radius: 10px;
+}
+.card-back{
+    transform: rotateY(180deg);
+}
+.card-back::before{
+    content:"";
+    display:block;
+    width:100%;
+    position:absolute;
+    height:100%;
+}
+h1{
+    margin: 10px;
+    text-align: center;
+    backface-visibility: hidden;
+}
+.card-font-1{
+    background-image:url("photos/1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-font-2{
+    background-image:url("photos/2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-font-3{
+    background-image:url("photos/3.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-font-4{
+    background-image:url("photos/4.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-font-5{
+    background-image:url("photos/5.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-font-6{
+    background-image:url("photos/6.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
