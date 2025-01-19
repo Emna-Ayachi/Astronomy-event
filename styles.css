@@ -4,11 +4,11 @@
     box-sizing: border-box;
     color : white ;
 }
-*::selection{
-    background-color: rgb(30, 251, 45);
-}
-body{
-    background-color : #eee ;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif; 
 }
 nav{
     display : grid;
@@ -29,18 +29,17 @@ li{
     cursor: pointer;
 }
 li::before{
-    content : '';
-    position: absolute;
-    height : 3px ;
-    width : 0 ;
-    bottom : -5px; ;
-    left : 0;
-    color : rgb(216, 175, 40) ;
-    background-color: rgb(30, 251, 45);
-    transition: width 0.3s ease;
+    content:'';
+    position:absolute;
+    width: 0;
+    height: 2px;
+    background-color:#fff;
+    left:0;
+    bottom: -10px;
+    transition: 0.3s all ease-in-out;
 }
 li:hover::before{
-    width : 50% ;
+    width : 100% ;
 }
 .logo{
     display : flex;
@@ -56,4 +55,21 @@ div{
 }
 nav{
     height : 50px ;
+    background-color: black;
+}
+.background{
+    background-image:url(background1.jpg);
+    background-size: cover;
+    background-position: center; 
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    color: white; 
+    justify-content: center;
+}
+h1 {
+    font-size: 4rem; 
+    font-weight: 700; 
+    margin:0;
+    text-align: center;
 }
