@@ -7,8 +7,7 @@
 *::selection{
     background-color: #6CB4EE;
 }
-.background ,.registration-background{
-    background-image: url("photos/background1.jpg");
+.background ,.registration-background , .faqs{
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -102,6 +101,8 @@ a{
 /*registration form*/
 .registration-background{
     background-image: url("photos/registration1.png");
+}
+.registration-background , .faqs{
     display : grid ;
     grid-template-columns: repeat(2,auto);
     align-items: center;
@@ -129,7 +130,7 @@ input{
 input::placeholder{
     text-align: center;
 }
-button{
+.registration-background button{
     padding : 10px ;
     border-radius: 10px ;
     background-color: #6CB4EE;
@@ -161,6 +162,12 @@ button:hover{
     height: 300px;
     perspective: 1000px;
     border-radius: 10px;
+    display : flex ;
+    flex-direction: column;
+    gap : 10px ;
+}
+.card h1{
+    text-align: center;
 }
 .card-inner {
     width: 100%;
@@ -216,4 +223,52 @@ button:hover{
 h1 {
     font-size: 1.2rem;
     margin: 0;
+}
+
+/* faqs section design */
+.faqs{
+    background-image: url("photos/faqs-background.png");
+}
+.faqs h1{
+    font-size : 40px ;
+    font-weight : 600;
+}
+.questions-container{
+    display : flex ;
+    flex-direction : column;
+    gap : 20px ;
+    align-items: center;
+    justify-content: center;
+}
+.questions-container button{
+    width : 400px ;
+    padding :10px ;
+    height : 50px ;
+    background-color : transparent;
+    border : none ;
+    cursor: pointer;
+    font-size : 20px ;
+    font-weight : 600;
+    display : flex ;
+    align-items: center;
+    justify-content: space-between;
+}
+span{
+    flex-grow:1;
+    color : #7CB9E8
+}
+#ans1 , #ans2 , #ans3 , #ans4 , #ans5{
+    width : 400px ;
+    max-height : 0px ;
+    background-color : transparent;
+    text-align: center;
+    overflow: hidden;
+    transition : 0.3s ease ;
+}
+.block{
+    width : auto ;
+    border-radius: 10px ;
+    font-size : 20px ;
+    font-weight : 400;
+    border : 1px solid grey
 }
