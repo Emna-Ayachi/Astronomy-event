@@ -38,7 +38,7 @@ ul{
     font-size : 20px ;
     font-weight: 400;
     padding : 10px ;
-
+    width : max-content;
 }
 li{
     position : relative;
@@ -98,7 +98,7 @@ nav{
 }
 @media (max-width: 992px) {
     .registration-background{
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
     input {
         width: 250px;
@@ -128,7 +128,7 @@ nav{
         height: 35px;
     }
     nav {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         text-align: center;
         font-size: 1em;
     }
@@ -218,6 +218,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    cursor : pointer;
 }
 .card h1{
     text-align: center;
@@ -282,37 +283,10 @@ h1 {
     font-size: 1.2rem;
     margin: 0;
 }
-/* Media queries for responsive design */
-@media (max-width: 1200px) {
-    .card {
-        width: 200px;
-        height: 350px;
-    }
-}
-@media (max-width: 992px) {
-    .background2 {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-    .card {
-        width: 200px;
-        height: 300px;
-    }
-}
-@media (max-width: 768px) {
-    .background2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .card {
-        width: 150px;
-        height: 250px;
-    }
-    .card p{
-        font-size : 13px ;
-    }
-}
+
 /* faqs section design */
 .faqs{
-    background-image:url(photos/FAQS.png);
+    background-image:url("photos/FAQS.png");
 }
 .faqs h1{
     font-size : 40px ;
@@ -377,8 +351,11 @@ footer{
 
 }
 .footer-containers{
-    gap : 20px ;
+    gap : 25px ;
     margin-left : 20px;
+}
+.footer-containers p{
+    max-width: 500px;
 }
 .logo-name , .icons{
     display : flex ;
@@ -389,6 +366,9 @@ footer{
 }
 .logo-name span{
     font-size: 30px ;
+}
+.logo-name span::selection{
+    color : white ;
 }
 .icons{
     gap : 50px ;
@@ -430,4 +410,34 @@ footer{
     color:white;
     font-size : 20px ;
     text-align: center;
+    height : 5vh;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+    .card {
+        width: 200px;
+        height: 350px;
+    }
+}
+@media (max-width: 992px) {
+    .background2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        width: 200px;
+        height: 300px;
+    }
+}
+@media (max-width: 768px) {
+    .background2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        width: 150px;
+        height: 250px;
+    }
+    .card p{
+        font-size : 13px ;
+    }
 }
