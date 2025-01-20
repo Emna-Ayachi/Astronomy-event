@@ -24,6 +24,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Arial', sans-serif;
+    background-color: black;
 }
 nav{
     display : grid;
@@ -73,7 +74,6 @@ div{
 }
 nav{
     height : auto ;
-    background-color: black;
 }
 .title{
     font-size: 4rem;
@@ -87,23 +87,26 @@ nav{
     cursor: pointer;
     color: white;
     padding: 0;
-    margin-left: auto;  
-    margin-right: 0;
-    width:50%;
+    width:100%;
+}
+.menu i {
+    font-size : 40px ;
+    color : #6CB4EE;
 }
 /* Media queries for responsive design */
 @media(max-width: 768px) {
     .menu {
-        display: block;
+        display: flex;
+        justify-content: center;
     }
     ul {
         display: none;
         flex-direction: column;
         gap: 15px;
         padding: 20px;
-        background-color: black;
+        background-color: transparent;
         position: absolute;
-        top: 60px; 
+        top: 60px;
         left: 0;
         width: 100%;
         text-align: center;
@@ -126,6 +129,7 @@ nav{
     p {
         text-align: center;
     }
+
 }
 @media(max-width: 576px){
     nav {
@@ -177,6 +181,12 @@ a{
     display : grid ;
     grid-template-columns: repeat(2,auto);
     align-items: center;
+}
+/*hide is made for animation */
+.hide{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease , transform 1s ease;
 }
 
 form{
@@ -259,7 +269,6 @@ button:hover{
 }
 /* workshops styling */
 .background2 {
-    background-color: black;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
@@ -345,6 +354,27 @@ h1 {
     margin: 0;
 }
 
+/* animation for the cards */
+.left{
+    transform: translateX(-100px);
+     opacity: 0;
+    transition: 1s ease;
+}
+.right {
+    transform: translateX(100px);
+     opacity: 0;
+    transition: 1s ease;
+}
+.appearX{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.appearY{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
 /* faqs section design */
 .faqs{
     background-image:url("photos/FAQS.png");
@@ -407,7 +437,7 @@ span{
         gap: 15px;
     }
     .questions-container button {
-        width: 80%; 
+        width: 80%;
         font-size: 18px;
     }
     #ans1, #ans2, #ans3, #ans4, #ans5 {
@@ -432,15 +462,15 @@ span{
         gap: 10px;
     }
     .questions-container button {
-        width: 90%; 
+        width: 90%;
         height: 45px;
         font-size: 16px;
     }
     #ans1, #ans2, #ans3, #ans4, #ans5 {
-        width: 90%; 
-        font-size: 14px; 
+        width: 90%;
+        font-size: 14px;
         padding: 10px;
-        margin-top: 5px; 
+        margin-top: 5px;
         border-radius: 5px;
     }
     .block {
@@ -453,7 +483,6 @@ footer{
     height : 40vh;
 }
 .footer{
-    background-color: black;
     display : flex ;
     align-items: center;
     justify-content: space-around;
@@ -528,7 +557,7 @@ footer{
     gap : 10px;
 }
 .copyrights{
-    background-color: black;
+
     color:white;
     font-size : 20px ;
     text-align: center;
@@ -537,51 +566,50 @@ footer{
 /* Media queries for responsive design */
 @media (max-width: 768px) {
     footer {
-        height: auto; 
-        background-color: black;
+        height: auto;
     }
     .footer {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         height: auto;
         padding: 20px;
-        text-align: center; 
+        text-align: center;
     }
     .footer-containers, .contact , .internal-icon-container{
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
-        text-align: center; 
+        text-align: center;
     }
     .contact{
         padding:10px;
     }
     .internal-contact-container {
         flex-direction: column;
-        align-items: center; 
-        justify-content: center; 
+        align-items: center;
+        justify-content: center;
         gap: 15px;
     }
     .logo-name {
         display: flex;
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
     }
     .icons {
         display: flex;
-        justify-content: center; 
-        align-items: center; 
+        justify-content: center;
+        align-items: center;
         gap: 20px;
     }
     .icons i {
         font-size: 20px;
     }
-    p {
-        max-width: 90%; 
-        text-align: center; 
+    /* p {
+        max-width: 90%;
+        text-align: center;
         margin: 10px auto;
-    }
+    } */
 }
 
 
@@ -590,6 +618,9 @@ footer{
     .card {
         width: 200px;
         height: 350px;
+    }
+    .footer-containers p{
+        max-width: 300px;
     }
 }
 @media (max-width: 992px) {
@@ -612,4 +643,5 @@ footer{
     .card p{
         font-size : 13px ;
     }
+
 }

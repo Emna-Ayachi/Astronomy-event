@@ -26,3 +26,31 @@ function toggleMenu() {
     const contacts = document.querySelector('.contacts');
     contacts.classList.toggle('active');
 }
+
+// defining the logic behind the animation
+const options = {threshold : 0.5};
+// 1) cards animation
+const cards = document.querySelectorAll('.card');
+let cardsObserver = new IntersectionObserver((entries , observer) => {
+
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("appearX");
+        }
+    })
+} , options)
+cards.forEach(card => {
+    cardsObserver.observe(card);
+});
+// 2) for the registration form
+const registration_Faqs = document.querySelectorAll('.hide');
+let registration_FaqsObserver = new IntersectionObserver((entries , observer) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("appearY");
+        }
+    })
+} , options)
+registration_Faqs.forEach(element => {
+    registration_FaqsObserver.observe(element);
+})
