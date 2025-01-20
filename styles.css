@@ -100,7 +100,7 @@ a{
 }
 /*registration form*/
 .registration-background{
-    background-image: url("photos/registration1.png");
+    background-image: url("photos/registration2.png");
 }
 .registration-background , .faqs{
     display : grid ;
@@ -150,21 +150,23 @@ button:hover{
     background-color: black;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
-    padding: 150px;
-    color: white;
-    height: 150vh;
-    margin:0;
+    justify-items: center; 
+    align-items: center; 
+    height: 150vh; 
+    margin: 0; 
+    padding: 90px; 
+    box-sizing: border-box; 
+    color:white;
+    gap:5px;
 }
 .card {
     width: 200px;
     height: 300px;
     perspective: 1000px;
     border-radius: 10px;
-    display : flex ;
+    display: flex;
     flex-direction: column;
-    gap : 10px ;
+    gap: 5px;
 }
 .card h1{
     text-align: center;
@@ -227,7 +229,7 @@ h1 {
 
 /* faqs section design */
 .faqs{
-    background-image: url("photos/faqs-background.png");
+    background-color:black;
 }
 .faqs h1{
     font-size : 40px ;
