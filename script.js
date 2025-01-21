@@ -22,4 +22,7 @@ buttons.forEach((btn) => {
         }
     })
 })
-
+function toggleMenu() {
+    const contacts = document.querySelector('.contacts');
+    contacts.classList.toggle('active');
+}

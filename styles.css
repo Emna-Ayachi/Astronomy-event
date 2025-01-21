@@ -81,56 +81,75 @@ nav{
     margin:0;
     text-align: center;
 }
+.menu{
+    display: none;
+    font-size: 10px;
+    cursor: pointer;
+    color: white;
+    padding: 0;
+    margin-left: auto;  
+    margin-right: 0;
+    width:50%;
+}
 /* Media queries for responsive design */
-@media (max-width: 1200px) {
-    input {
-        width: 300px;
-        height: 45px;
-        font-size: 18px;
+@media(max-width: 768px) {
+    .menu {
+        display: block;
     }
-    form h1 {
-        font-size: 40px;
+    ul {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        background-color: black;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        text-align: center;
     }
-    .registration-background button {
-        width: 180px;
-        height: 45px;
+    .contacts.active ul {
+        display: flex;
     }
-}
-@media (max-width: 992px) {
-    .registration-background{
-        grid-template-columns: 1fr;
-    }
-    input {
-        width: 250px;
-        height: 40px;
-        font-size: 16px;
-    }
-    form h1 {
-        font-size: 35px;
-    }
-    .registration-background button {
-        width: 160px;
-        height: 40px;
-    }
-}
-/*change this later they shouldnt be under the logo*/
-@media (max-width: 768px) {
-    input {
-        width: 200px;
-        height: 35px;
-        font-size: 14px;
-    }
-    form h1 {
-        font-size: 20px;
-    }
-    .registration-background button {
-        width: 140px;
-        height: 35px;
+    .logo {
+        margin-left: 0;
+        justify-content: center;
     }
     nav {
-        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    p {
         text-align: center;
-        font-size: 1em;
+    }
+}
+@media(max-width: 576px){
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul {
+        gap: 15px;
+        padding: 0;
+        justify-content: center;
+    }
+    li {
+        font-size: 15px;
+    }
+    .logo {
+        margin-left: 0;
+        justify-content: center;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    p{
+        text-align:center;
     }
 }
 
@@ -195,6 +214,48 @@ input::placeholder{
 button:hover{
     background-color : white ;
     color : #6CB4EE;
+}
+/* Media queries for responsive design */
+@media (max-width:768px){
+    .registration-background {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px;
+    }
+    form h1 {
+        font-size: 30px;
+    }
+    input {
+        width: 300px;
+        height: 45px;
+        font-size: 18px;
+    }
+    .registration-background button {
+        width: 180px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+/*the button got bigger?*/
+@media (max-width: 480px) {
+    .registration-background {
+        padding: 20px;
+        gap: 20px;
+        text-align: center;
+    }
+    form h1 {
+        font-size: 10px;
+    }
+    input {
+        width: 70%;
+        height: 30px;
+        font-size: 16px;
+    }
+    .registration-background button {
+        width: 100px;
+        height: 40px;
+        font-size: 10px;
+    }
 }
 /* workshops styling */
 .background2 {
@@ -331,7 +392,62 @@ span{
     font-weight : 400;
     border : 1px solid grey
 }
-
+/* Media queries for responsive design */
+@media(max-width:768px){
+    .faqs {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px;
+        text-align: center;
+    }
+    .faqs h1 {
+        font-size: 35px;
+    }
+    .questions-container {
+        gap: 15px;
+    }
+    .questions-container button {
+        width: 80%; 
+        font-size: 18px;
+    }
+    #ans1, #ans2, #ans3, #ans4, #ans5 {
+        width: 80%;
+    }
+    .block {
+        font-size: 18px;
+    }
+}
+@media (max-width: 480px) {
+    .faqs {
+        padding: 20px;
+        gap: 20px;
+        text-align: center;
+        min-height: 100vh; /* Allow the section to expand dynamically */
+        overflow-y: auto;
+    }
+    .faqs h1 {
+        font-size: 20px;
+    }
+    .questions-container {
+        gap: 10px;
+    }
+    .questions-container button {
+        width: 90%; 
+        height: 45px;
+        font-size: 16px;
+    }
+    #ans1, #ans2, #ans3, #ans4, #ans5 {
+        width: 90%; 
+        font-size: 14px; 
+        padding: 10px;
+        margin-top: 5px; 
+        border-radius: 5px;
+    }
+    .block {
+        font-size: 16px;
+        padding: 5px;
+    }
+}
 /* footer styling */
 footer{
     height : 40vh;
@@ -418,6 +534,56 @@ footer{
     text-align: center;
     height : 5vh;
 }
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    footer {
+        height: auto; 
+        background-color: black;
+    }
+    .footer {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+        height: auto;
+        padding: 20px;
+        text-align: center; 
+    }
+    .footer-containers, .contact , .internal-icon-container{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        text-align: center; 
+    }
+    .contact{
+        padding:10px;
+    }
+    .internal-contact-container {
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        gap: 15px;
+    }
+    .logo-name {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .icons {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        gap: 20px;
+    }
+    .icons i {
+        font-size: 20px;
+    }
+    p {
+        max-width: 90%; 
+        text-align: center; 
+        margin: 10px auto;
+    }
+}
+
 
 /* Media queries for responsive design */
 @media (max-width: 1200px) {
