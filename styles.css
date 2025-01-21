@@ -219,7 +219,8 @@ input::placeholder{
     width : 200px ;
     height : 50px;
     cursor : pointer;
-    transition: 1s ease;
+    transition: background-color 1s ease , color 1s ease;
+
 }
 button:hover{
     background-color : white ;
@@ -264,7 +265,6 @@ button:hover{
     .registration-background button {
         width: 100px;
         height: 40px;
-        font-size: 10px;
     }
 }
 /* workshops styling */
@@ -475,7 +475,7 @@ span{
     }
     .block {
         font-size: 16px;
-        padding: 5px;
+        /* padding: 5px; */
     }
 }
 /* footer styling */
@@ -605,17 +605,12 @@ footer{
     .icons i {
         font-size: 20px;
     }
-    /* p {
-        max-width: 90%;
-        text-align: center;
-        margin: 10px auto;
-    } */
 }
 
 
 /* Media queries for responsive design */
 @media (max-width: 1200px) {
-    .card {
+      .card {
         width: 200px;
         height: 350px;
     }
