@@ -1,3 +1,14 @@
+.russo-one-regular {
+    font-family: "Russo One", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 5px;
+  }
+.lobster-regular {
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 *{
     padding:  0px ;
     margin : 0px ;
@@ -11,7 +22,7 @@
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
 }
 /*main section backround*/
@@ -93,57 +104,7 @@ nav{
     color : #6CB4EE;
 }
 /* Media queries for responsive design */
-@media(max-width: 768px) {
-    .menu {
-        display: flex;
-        justify-content:flex-end;
-        position:relative;
-        right:10px;
-    }
-    ul {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background-color: rgba(108, 180, 238, 0.7);
-        position: absolute;
-        top: 75px;
-        right: 10px;
-        width: 50%;
-        text-align: center;
-        z-index:1000 ;
-        border-radius: 10px;
-    }
-    li{
-        border-radius: 10px;
-    }
-    li:hover{
-        background-color: rgba(108, 180, 238, 0.3);;
-    }
-    li::before{
-        display : none ;
-    }
-    .contacts.active ul {
-        display: flex;
-    }
-    .logo {
-        margin-left: 0;
-        justify-content: center;
-    }
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .title {
-        font-size: 2rem;
-        margin-top: 100px;
-    }
-    p {
-        text-align: center;
-        margin-top: 30px;
-    }
 
-}
 @media(max-width: 576px){
     nav {
         display: flex;
@@ -200,6 +161,7 @@ a{
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 1s ease , transform 1s ease;
+    min-height : fit-content;
 }
 
 form{
@@ -239,59 +201,18 @@ button:hover{
     background-color : white ;
     color : #6CB4EE;
 }
-/* Media queries for responsive design */
-@media (max-width:768px){
-    .registration-background {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 30px;
-    }
-    form h1 {
-        font-size: 30px;
-    }
-    input {
-        width: 300px;
-        height: 45px;
-        font-size: 18px;
-    }
-    .registration-background button {
-        width: 180px;
-        height: 45px;
-        font-size: 16px;
-    }
-}
-/*the button got bigger?*/
-@media (max-width: 480px) {
-    .registration-background {
-        padding: 20px;
-        gap: 20px;
-        text-align: center;
-    }
-    form h1 {
-        font-size: 10px;
-    }
-    input {
-        width: 70%;
-        height: 30px;
-        font-size: 16px;
-    }
-    .registration-background button {
-        width: 100px;
-        height: 40px;
-    }
-}
 /* workshops styling */
 .background2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
-    height: 150vh;
-    margin: 0;
-    padding: 90px;
+    height: auto;
+
+    /* padding: 90px; */
     box-sizing: border-box;
     color:white;
-    gap:5px;
+    gap:20px;
 }
 .card {
     width: 300px;
@@ -405,8 +326,8 @@ h1 {
     align-items: center;
     justify-content: center;
 }
-.questions-container button{
-    width : 400px ;
+.btn{
+    width : 100% ;
     padding :10px ;
     height : 50px ;
     background-color : transparent;
@@ -422,8 +343,14 @@ span{
     flex-grow:1;
     color : #7CB9E8
 }
+button i {
+    color : #7CB9E8;
+}
+button span::selection , button i::selection{
+    color : white ;
+}
 #ans1 , #ans2 , #ans3 , #ans4 , #ans5{
-    width : 400px ;
+    width : 100% ;
     max-height : 0px ;
     background-color : transparent;
     text-align: center;
@@ -431,77 +358,24 @@ span{
     transition : 0.3s ease ;
 }
 .block{
-    width : auto ;
+    width : 400px ;
     border-radius: 10px ;
-    font-size : 20px ;
+    /* font-size : 20px ; */
     font-weight : 400;
     border : 1px solid grey
 }
 /* Media queries for responsive design */
-@media(max-width:768px){
-    .faqs {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 30px;
-        text-align: center;
-    }
-    .faqs h1 {
-        font-size: 35px;
-    }
-    .questions-container {
-        gap: 15px;
-    }
-    .questions-container button {
-        width: 80%;
-        font-size: 18px;
-    }
-    #ans1, #ans2, #ans3, #ans4, #ans5 {
-        width: 80%;
-    }
-    .block {
-        font-size: 18px;
-    }
-}
-@media (max-width: 480px) {
-    .faqs {
-        padding: 20px;
-        gap: 20px;
-        text-align: center;
-        min-height: 100vh; /* Allow the section to expand dynamically */
-        overflow-y: auto;
-    }
-    .faqs h1 {
-        font-size: 20px;
-    }
-    .questions-container {
-        gap: 10px;
-    }
-    .questions-container button {
-        width: 90%;
-        height: 45px;
-        font-size: 16px;
-    }
-    #ans1, #ans2, #ans3, #ans4, #ans5 {
-        width: 90%;
-        font-size: 14px;
-        padding: 10px;
-        margin-top: 5px;
-        border-radius: 5px;
-    }
-    .block {
-        font-size: 16px;
-        /* padding: 5px; */
-    }
-}
+
+
 /* footer styling */
 footer{
-    height : 40vh;
+    min-height : 40vh;
 }
 .footer{
     display : flex ;
     align-items: center;
     justify-content: space-around;
-    height : 40vh;
+    height : 100%;
 
 }
 .footer-containers ,.contact{
@@ -580,6 +454,26 @@ footer{
 }
 /* Media queries for responsive design */
 @media (max-width: 768px) {
+    /* registration */
+    .registration-background {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px;
+    }
+    form h1 {
+        font-size: 30px;
+    }
+    input {
+        width: 300px;
+        height: 45px;
+        font-size: 18px;
+    }
+    .registration-background button {
+        width: 180px;
+        height: 45px;
+        font-size: 12px;
+    }
+    /* footer */
     footer {
         height: auto;
     }
@@ -620,6 +514,89 @@ footer{
     .icons i {
         font-size: 20px;
     }
+    .block{
+        width : 300px;
+    }
+    .answer , .btn span {
+        font-size : 15px ;
+    }
+    /* cards */
+    .background2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        width: 150px;
+        height: 250px;
+    }
+    .card p{
+        font-size : 13px ;
+    }
+    .card h1{
+        font-size : 15px ;
+    }
+    /* faqs */
+    .faqs {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px;
+        text-align: center;
+    }
+    .faqs h1 {
+        font-size: 35px;
+    }
+    .questions-container {
+        gap: 15px;
+    }
+    /* nav bar */
+    .menu {
+        display: flex;
+        justify-content:flex-end;
+        position:relative;
+        right:10px;
+    }
+    ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgba(108, 180, 238, 0.7);
+        position: absolute;
+        top: 75px;
+        right: 10px;
+        width: 50%;
+        text-align: center;
+        z-index:1000 ;
+        border-radius: 10px;
+    }
+    li{
+        border-radius: 10px;
+    }
+    li:hover{
+        background-color: rgba(108, 180, 238, 0.3);;
+    }
+    li::before{
+        display : none ;
+    }
+    .contacts.active ul {
+        display: flex;
+    }
+    .logo {
+        margin-left: 0;
+        justify-content: center;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .title {
+        font-size: 2rem;
+        margin-top: 100px;
+    }
+    p {
+        text-align: center;
+        margin-top: 30px;
+    }
+
 }
 
 
@@ -645,19 +622,52 @@ footer{
         font-size : 15px ;
     }
 }
-@media (max-width: 768px) {
-    .background2 {
-        grid-template-columns: repeat(2, 1fr);
+@media (max-width: 480px) {
+    .faqs {
+        gap: 20px;
+        text-align: center;
+        min-height: 50vh; /* Allow the section to expand dynamically */
+        overflow-y: auto;
     }
-    .card {
-        width: 150px;
-        height: 250px;
+    .faqs h1 {
+        font-size: 20px;
     }
-    .card p{
-        font-size : 13px ;
+    .questions-container {
+        gap: 10px;
     }
-    .card h1{
-        font-size : 15px ;
+    .questions-container button {
+        /* width: 90%; */
+        height: 45px;
+        font-size: 16px;
     }
+    #ans1, #ans2, #ans3, #ans4, #ans5 {
+        /* width: 90%; */
+        font-size: 14px;
+        /* padding: 10px; */
+        /* margin-top: 5px; */
+        /* border-radius: 5px; */
+    }
+    .block {
+        font-size: 16px;
+        /* padding: 5px; */
+    }
+    /* registration */
+    .registration-background {
+        padding: 20px;
+        gap: 20px;
+        text-align: center;
+    }
+    form h1 {
+        font-size: 10px;
+    }
+    input {
+        width: 70%;
+        height: 30px;
+        font-size: 16px;
+    }
+    .registration-background button {
+        width: 100px;
+        height: 40px;
 
+    }
 }
