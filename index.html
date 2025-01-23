@@ -19,11 +19,11 @@
             </div>
             <div class="contacts">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="workshops.html">Workshops</a></li>
-                    <li><a href="registration.html">Registration</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="faqs.html">FAQS</a></li>
+                    <li><a href="#home-page">Home</a></li>
+                    <li><a href="#workshops">Workshops</a></li>
+                    <li><a href="#registration">Registration</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#faqs">FAQS</a></li>
                 </ul>
             </div>
             <div class="menu" onclick="toggleMenu()">
@@ -40,7 +40,7 @@
             </div>
         </section>
         <!--workshops-->
-        <section role="region" aria-labelledby="workshops" class="background2">
+        <section role="region" aria-labelledby="workshops" class="background2" id="workshops">
             <div class="card left" id="card1">
                 <h1 >Hands-On Workshop</h1>
                 <div class="card-inner notrotated" >
@@ -100,7 +100,7 @@
         </section>
 
         <!--registration section-->
-        <section class="registration-background">
+        <section role="region" class="registration-background" aria-labelledby="registration" id="registration">
             <div></div>
             <form action="#" class="hide">
                 <h1>. Registration Form .</h1>
@@ -114,7 +114,7 @@
         </section>
 
         <!-- FAQs page section-->
-        <section class="faqs">
+        <section role="region" class="faqs" aria-labelledby="faqs" id="faqs">
             <div class="questions-container hide">
                 <h1>Frequenty Asked Questions</h1>
                 <!-- question 1-->
@@ -145,7 +145,7 @@
             </div>
         </section>
     </main>
-    <footer class="hide">
+    <footer role="region" class="hide" aria-labelledby="contact" id="contact">
         <div class="footer">
             <div class="footer-containers">
                 <div class="logo-name">
