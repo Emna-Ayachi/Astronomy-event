@@ -142,6 +142,7 @@ nav{
 }
 .main-section p {
     font-size : 20px;
+    text-align:center;
 }
 /* anchor tags styling*/
 a{
@@ -201,6 +202,9 @@ button:hover{
     background-color : white ;
     color : #6CB4EE;
 }
+.btn:hover{
+    background-color:#1D1D1D;
+}
 /* workshops styling */
 .background2 {
     display: grid;
@@ -257,6 +261,10 @@ button:hover{
     background-color: 000;
     color: white;
     transform: rotateY(180deg);
+    text-align: center;
+}
+.card-back p {
+    margin:0px;
 }
 .card-font-1, .card-font-2, .card-font-3, .card-font-4, .card-font-5, .card-font-6 {
     background-size: cover;
@@ -338,6 +346,7 @@ h1 {
     display : flex ;
     align-items: center;
     justify-content: space-between;
+    border-radius: 10px;
 }
 span{
     flex-grow:1;
@@ -363,6 +372,12 @@ button span::selection , button i::selection{
     /* font-size : 20px ; */
     font-weight : 400;
     border : 1px solid grey
+}
+.rotated{
+    transform: rotateY(180deg) ;
+}
+.notrotated{
+    transform: rotateY(0deg) ;
 }
 /* Media queries for responsive design */
 
@@ -630,7 +645,7 @@ footer{
         overflow-y: auto;
     }
     .faqs h1 {
-        font-size: 20px;
+        font-size: 30px;
     }
     .questions-container {
         gap: 10px;
@@ -658,7 +673,7 @@ footer{
         text-align: center;
     }
     form h1 {
-        font-size: 10px;
+        font-size: 15px;
     }
     input {
         width: 70%;
@@ -668,6 +683,11 @@ footer{
     .registration-background button {
         width: 100px;
         height: 40px;
-
+        font-size : 10px ;
+    }
+    /* card */
+    .card{
+        height : 200px ;
+        width : 150px ;
     }
 }

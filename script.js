@@ -4,7 +4,6 @@ let buttons = document.querySelectorAll(".btn");
 let answers = document.querySelectorAll(".answer")
 // creating an array of tags aka + and - 's
 let tags = document.querySelectorAll('.tags');
-console.log(tags);
 
 // creating an objected containing as key the button and as a value the answer
 let obj = {"q1":[answers[0] , tags[0]] , "q2":[answers[1] , tags[1]], "q3":[answers[2] , tags[2]],"q4":[answers[3] , tags[3]],"q5":[answers[4] , tags[4]]};
@@ -54,3 +53,19 @@ let registration_FaqsObserver = new IntersectionObserver((entries , observer) =>
 registration_Faqs.forEach(element => {
     registration_FaqsObserver.observe(element);
 })
+
+// cards animation
+let cardsInner = document.querySelectorAll('.card-inner');
+cardsInner.forEach(card => {
+    card.addEventListener('click' , () => {
+        if(card.classList.contains("notrotated")){
+            card.style.transform="rotateY(180deg)";
+            card.classList.replace("notrotated","rotated");
+        }else{
+            card.style.transform="rotateY(0deg)";
+            card.removeAttribute("style");
+            card.classList.replace("rotated","notrotated");
+        }
+    })
+})
+
