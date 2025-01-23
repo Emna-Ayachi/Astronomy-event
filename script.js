@@ -57,15 +57,20 @@ registration_Faqs.forEach(element => {
 // cards animation
 let cardsInner = document.querySelectorAll('.card-inner');
 cardsInner.forEach(card => {
-    card.addEventListener('click' , () => {
-        if(card.classList.contains("notrotated")){
-            card.style.transform="rotateY(180deg)";
-            card.classList.replace("notrotated","rotated");
-        }else{
-            card.style.transform="rotateY(0deg)";
-            card.removeAttribute("style");
-            card.classList.replace("rotated","notrotated");
-        }
-    })
-})
+    card.addEventListener('click', (event) => {
+        event.stopPropagation();
 
+        if (card.classList.contains("notrotated")) {
+            card.classList.replace("notrotated", "rotated");
+        } else {
+            card.classList.replace("rotated", "notrotated");
+        }
+    });
+});
+
+let section = document.querySelector(".background2");
+section.addEventListener('click', () => {
+    cardsInner.forEach(card => {
+        card.classList.replace("rotated", "notrotated");
+    });
+});

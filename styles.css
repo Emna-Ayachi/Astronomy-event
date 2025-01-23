@@ -651,20 +651,15 @@ footer{
         gap: 10px;
     }
     .questions-container button {
-        /* width: 90%; */
+
         height: 45px;
         font-size: 16px;
     }
     #ans1, #ans2, #ans3, #ans4, #ans5 {
-        /* width: 90%; */
         font-size: 14px;
-        /* padding: 10px; */
-        /* margin-top: 5px; */
-        /* border-radius: 5px; */
     }
     .block {
         font-size: 16px;
-        /* padding: 5px; */
     }
     /* registration */
     .registration-background {
