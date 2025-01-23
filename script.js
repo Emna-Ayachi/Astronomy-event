@@ -27,7 +27,7 @@ function toggleMenu() {
 }
 
 // defining the logic behind the animation
-const options = {threshold : 0.5};
+const options = {threshold : 0.1};
 // 1) cards animation
 const cards = document.querySelectorAll('.card');
 let cardsObserver = new IntersectionObserver((entries , observer) => {
@@ -68,7 +68,7 @@ cardsInner.forEach(card => {
     });
 });
 
-let section = document.querySelector(".background2");
+let section = document.querySelector("body");
 section.addEventListener('click', () => {
     cardsInner.forEach(card => {
         card.classList.replace("rotated", "notrotated");
