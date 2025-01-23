@@ -467,6 +467,10 @@ footer{
     text-align: center;
     height : 5vh;
 }
+.footer-containers p{
+    margin-left : 0px ;
+    text-align : center ;
+}
 /* Media queries for responsive design */
 @media (max-width: 768px) {
     /* registration */
