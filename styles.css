@@ -25,6 +25,7 @@
     min-height: 100vh;
     display: flex;
 }
+
 /*main section backround*/
 .background {
     background-image: url("photos/background1.jpg");
@@ -36,6 +37,7 @@ body, html {
     height: 100%;
     font-family: 'Arial', sans-serif;
     background-color: black;
+    overflow-x:hidden;
 }
 nav{
     display : grid;
@@ -212,7 +214,6 @@ button:hover{
     justify-items: center;
     align-items: center;
     height: auto;
-
     /* padding: 90px; */
     box-sizing: border-box;
     color:white;

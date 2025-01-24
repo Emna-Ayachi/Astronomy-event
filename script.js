@@ -27,7 +27,7 @@ function toggleMenu() {
 }
 
 // defining the logic behind the animation
-const options = {threshold : 0.1};
+const options = {threshold : 0.3};
 // 1) cards animation
 const cards = document.querySelectorAll('.card');
 let cardsObserver = new IntersectionObserver((entries , observer) => {
