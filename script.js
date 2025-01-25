@@ -21,11 +21,17 @@ buttons.forEach((btn) => {
         }
     })
 })
+const contacts = document.querySelector('.contacts');
+const elements = document.querySelectorAll('.contacts li');
+    elements.forEach(element =>{
+        element.addEventListener('click' , () => {
+           
+            contacts.classList.remove('active');
+        })
+    })
 function toggleMenu() {
-    const contacts = document.querySelector('.contacts');
-    contacts.classList.toggle('active');
+    contacts.classList.toggle('active');  
 }
-
 // defining the logic behind the animation
 const options = {threshold : 0.3};
 // 1) cards animation
